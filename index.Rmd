@@ -1,0 +1,75 @@
+--- 
+title: "Handbook of Regression Modeling in People Analytics"
+subtitle: "With Examples in R and Python"
+author: "Keith McNulty"
+site: bookdown::bookdown_site
+always_allow_html: true
+documentclass: krantz
+bibliography: r/book.bib
+fig-caption: yes
+link-citations: yes
+github-repo: keithmcnulty/peopleanalytics-regression-book
+---
+
+
+```{r, echo = FALSE}
+library(reticulate)
+matplotlib <- import("matplotlib")
+matplotlib$use("Agg", force = TRUE)
+
+if (knitr::is_latex_output()) {
+  options(width = 100)
+}
+# knitr::opts_chunk$set(dpi=300)
+
+```
+
+`r if (knitr::is_latex_output()) '<!--'`
+# Welcome {-}
+
+Welcome to the website for the book *Handbook of Regression Modeling in People Analytics* by [Keith McNulty](https://twitter.com/dr_keithmcnulty).  
+
+```{asis}
+::: {.infobox .caution}
+**Note**: This book is to be published by Chapman & Hall/CRC later in 2021. The online version of this book is free to read here (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). If you have any feedback, please feel free to [file an issue on GitHub](https://github.com/keithmcnulty/peopleanalytics-regression-book/issues). Thank you!
+:::
+```
+
+This book is available in [bootstrap format](http://peopleanalytics-regression-book.org) and, for those who prefer, in a more plain [gitbook format](http://peopleanalytics-regression-book.org/gitbook).
+`r if (knitr::is_latex_output()) '--> \\newpage\\thispagestyle{empty}\\null'`
+
+### Notes on data used in this book {-}
+
+For R and Python users, each of the data sets used in this book can be downloaded individually by following the code in each chapter.  Alternatively for R users who intend to work through all of the chapters, all data sets can be loaded into an R session in advance by installing and loading the `peopleanalyticsdata` R package.  
+
+```{r, eval = FALSE}
+# install peopleanalyticsdata package
+install.packages("peopleanalyticsdata")
+library(peopleanalyticsdata)
+
+# see a list of data sets
+data(package = "peopleanalyticsdata")
+
+# find out more about a specific data set ('managers' example)
+help(managers)
+```
+
+
+`r if (knitr::is_latex_output()) '<!--'`
+### Solutions to exercises {-}
+
+It is not my intention to publish a comprehensive set of solutions to the exercises in this book.  Many of the exercises can be approached in different ways and I think it is important that readers apply their learning without being constrained to an example solution.  However, some specific questions have generated considerable interest from readers and I have started to post example solutions to those questions [here](https://keithmcnulty.github.io/peopleanalytics-regression-book/solutions/).  Illustrative solutions submitted by readers will progressively be posted there also.  
+
+
+Happy modeling!
+
+*Last update:  `r format(Sys.Date(), "%d %B %Y")`*
+
+`r if (knitr::is_latex_output()) '-->'`
+
+
+
+
+
+
+
